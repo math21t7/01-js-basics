@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Person 1 alder</p>
+    <input type="text" id="age1" />
+    <p>Person 2 alder</p>
+    <input type="text" id="age2" />
+    <button>Tryk</button>
+    <script>
+      document.querySelector("button").addEventListener("click", buttonClicked);
+      function buttonClicked() {
+        let age1 = document.querySelector("#age1").value;
+        let age2 = document.querySelector("#age2").value;
+        let comb = age1 / 2 + 7;
+        let comb1 = age2 / 2 + 7;
+        let resultat;
+
+        if (age2 < 15) {
+          resultat =
+            "Person 1 er under 15- man skal være fyldt 15 for at benytte programmet";
+        } else if (age1 < 15) {
+          resultat =
+            "Person 2 er under 15- man skal være fyldt 15 for at benytte programmet";
+        } else if (age2 < comb) {
+          resultat = "Reglen er ikke overholdt, person 2 er for ung";
+        } else if (age2 > comb) {
+          resultat = "Reglen er ikke overholdt, person 2 er for gammel";
+        } else {
+          resultat = "Reglen er overholdt";
+        }
+        console.log(resultat);
+      }
+    </script>
+  </body>
+</html>
