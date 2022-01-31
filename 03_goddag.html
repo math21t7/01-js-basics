@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <input type="Goddag" id="name" />
+  <button id="button">Ok</button>
+  <body>
+    <script>
+      let længde = 25;
+      let bredde = 5;
+      let areal = længde * bredde;
+      let resultat;
+
+      if (areal < 100) {
+        resultat = "Arealet er for lille";
+      } else if (areal < 200) {
+        resultat = "Arealet er ok";
+      } else {
+        resultat = "Arealet er for stort";
+      }
+      console.log(resultat);
+
+      document
+        .querySelector("#button")
+        .addEventListener("click", funktionAktiv);
+
+      function funktionAktiv() {
+        let brugerNavn = document.querySelector("#name").value;
+        console.log(`Goddag ${brugerNavn}`);
+      }
+    </script>
+  </body>
+</html>
