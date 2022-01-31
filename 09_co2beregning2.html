@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let timer = 6;
+      let co2 = timer * 109;
+      let resultat = `Ved ${timer} timers flyrejse har du udledt ${co2} kg CO2.`;
+
+      if (co2 < 100) {
+        resultat = resultat + " , tæt på Thunberg";
+      } else if (co2 < 200) {
+        resultat = resultat + "  Ja ja, du behøver ikke melde dig ud af Å";
+      } else if (co2 < 600) {
+        resultat = resultat + " Det er godt for turismen i Nordeuropa";
+      } else {
+        resultat =
+          resultat + " Nå ja, vi kan jo altid kolonisere en anden planet";
+      }
+      console.log(resultat);
+    </script>
+  </body>
+</html>
