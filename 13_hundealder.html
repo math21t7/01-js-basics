@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Indtast hundens alder</p>
+    <input type="text" id="age" />
+    <button>Beregn</button>
+    <script>
+      document.querySelector("button").addEventListener("click", buttonClicked);
+      function buttonClicked() {
+        let age = document.querySelector("#age").value;
+        let age1 = 7 * age;
+        let age2 = 16 * Math.log(age) + 31;
+        age2 = Math.round(age2);
+        let resultat = `Din hunds alder er ${age1} menneskeår ifølge den gamle udregning, og ${age2} menneskeår ifølge den nye.`;
+
+        console.log(resultat);
+      }
+    </script>
+  </body>
+</html>
